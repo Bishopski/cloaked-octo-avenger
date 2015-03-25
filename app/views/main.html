@@ -1,0 +1,36 @@
+<h1>main</h1>
+
+<h2>User</h2>
+<p>name: {{ User.firstName }} {{ User.surname }}</p>
+<p>email: {{ User.email }}</p>
+<p>phoneNumber: {{ User.phoneNumber }}</p>
+<p ng-repeat="(key, value) in User.address">{{ key }}: {{ value }}</p>
+
+<h2>Utility</h2>
+<p>name: {{ Utility.name }}</p>
+<p>email: {{ Utility.email }}</p>
+
+<h2>Change address</h2>
+<form ng-submit="changeAddress()">
+	<fieldset>
+		<label>addressLine1:</label>
+		<input ng-model="address.addressLine1">
+	</fieldset>
+	<fieldset>
+		<label>addressLine2:</label>
+		<input ng-model="address.addressLine2">
+	</fieldset>
+	<fieldset>
+		<label>town:</label>
+		<input ng-model="address.town">
+	</fieldset>
+	<fieldset>
+		<label>county:</label>
+		<input ng-model="address.county">
+	</fieldset>
+	<fieldset>
+		<label>postCode:</label>
+		<input ng-model="address.postCode">
+	</fieldset>
+	<button type="submit">Submit</button>
+</form>
